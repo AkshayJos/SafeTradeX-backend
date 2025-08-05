@@ -140,8 +140,8 @@ public class PaymentServiceImpl implements PaymentService{
         SessionCreateParams params = SessionCreateParams.builder()
                 .addPaymentMethodType(SessionCreateParams.PaymentMethodType.CARD)
                 .setMode(SessionCreateParams.Mode.PAYMENT)
-                .setSuccessUrl("http://localhost:5173/wallet?order_id=" + orderId + "&session_id={CHECKOUT_SESSION_ID}")
-                .setCancelUrl("http://localhost:5173/payment/cancel")
+                .setSuccessUrl("https://safetradex.onrender.com/wallet?order_id=" + orderId + "&session_id={CHECKOUT_SESSION_ID}")
+                .setCancelUrl("https://safetradex.onrender.com/payment/cancel")
                 .addLineItem(SessionCreateParams.LineItem.builder()
                         .setQuantity(1L)
                         .setPriceData(
